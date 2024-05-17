@@ -7,6 +7,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute';
+import Logout from './components/Logout/Logout';
 import './App.css';
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
                   <Route path="/" element={<PrivateRoute element={Home} />} />
                   <Route path="/seguidores" element={<PrivateRoute element={Followers} />} />
                   <Route path="/seguidos" element={<PrivateRoute element={Following} />} />
-                  <Route path="/logout"/>
+                  <Route path="/logout" element={<PrivateRoute element={Logout}/>}/>
                 </Routes>
               </>
             }

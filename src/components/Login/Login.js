@@ -17,6 +17,7 @@ const Login = () => {
         password
       });
       localStorage.setItem('token', response.data.token);
+      localStorage.setItem('username', username);
       navigate('/home');
     } catch (error) {
       setError('Invalid username or password');
