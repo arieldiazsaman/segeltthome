@@ -1,0 +1,64 @@
+.home {
+    width: 100%;
+    padding: 20px;
+}
+
+.home h2 {
+    color: white;
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.post-button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: #0d95e8;
+}
+
+.error-message {
+    color: red;
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.post h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.post p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    color: #555;
+}

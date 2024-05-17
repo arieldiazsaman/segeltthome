@@ -21,13 +21,17 @@ function App() {
             path="/*"
             element={
               <>
-                <Sidebar />
-                <Routes>
-                  <Route path="/" element={<PrivateRoute element={Home} />} />
-                  <Route path="/seguidores" element={<PrivateRoute element={Followers} />} />
-                  <Route path="/seguidos" element={<PrivateRoute element={Following} />} />
-                  <Route path="/logout" element={<PrivateRoute element={Logout}/>}/>
-                </Routes>
+                <div className="sidebar">
+                  <Sidebar />
+                </div>
+                <div className="main-content">
+                  <Routes>
+                    <Route path="/" element={<PrivateRoute element={Home} />} />
+                    <Route path="/seguidores" element={<PrivateRoute element={Followers} />} />
+                    <Route path="/seguidos" element={<PrivateRoute element={Following} />} />
+                    <Route path="/logout" element={<PrivateRoute element={Logout}/>}/>
+                  </Routes>
+                </div>
               </>
             }
           />
