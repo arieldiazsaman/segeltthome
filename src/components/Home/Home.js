@@ -34,7 +34,6 @@ const Home = () => {
         owner_name: localStorage.getItem('username'),
         text: postContent
       });
-      console.log(`post response> ${ JSON.stringify(response.data.post) }`)
       setPosts([response?.data?.post, ...posts]);
       setPostContent('');
       setError('');
@@ -51,7 +50,7 @@ const Home = () => {
           value={postContent}
           onChange={(e) => setPostContent(e.target.value)}
           maxLength="280"
-          placeholder="What's happening?"
+          placeholder="Qué está pasando!?"
           className="post-textarea"
         />
         <button type="submit" className="post-button">Post</button>

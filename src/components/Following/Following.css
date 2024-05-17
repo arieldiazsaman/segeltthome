@@ -1,0 +1,46 @@
+.following {
+  width: 100%;
+  padding: 20px;
+}
+
+.following h2 {
+  color: white;
+}
+
+.post-button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #0d95e8;
+}
+
+.users {
+  margin-top: 20px;
+}
+
+.user {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.user h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #555;
+}

@@ -1,0 +1,48 @@
+.followers {
+  width: 100%;
+  padding: 20px;
+}
+
+.followers h2 {
+  color: white;
+}
+
+.users {
+  margin-top: 20px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.user h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.user p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.follow-button {
+  padding: 5px 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.follow-button:hover {
+  background-color: #0d95e8;
+}
