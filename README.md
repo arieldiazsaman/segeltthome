@@ -1,6 +1,6 @@
-#### SEGEl Twitter mock Frontend
+### SEGEl Twitter mock Frontend
 
-### Descripción
+## Descripción
 
 Este proyecto pretende crear un Mock de twitter en base a diferentes criterios.
 
