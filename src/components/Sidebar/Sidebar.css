@@ -1,0 +1,31 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    background-color: #15202B;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.sidebar__link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar__link:hover {
+    background-color: #1D9BF0;
+}
+
+.sidebar__link i {
+    margin-right: 10px;
+}
+
+  

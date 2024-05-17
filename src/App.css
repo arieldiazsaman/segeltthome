@@ -1,5 +1,25 @@
 .App {
-  text-align: center;
+  display: flex;
+  background-color: #000000;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #15202B;
+  color: #FFFFFF;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  box-sizing: border-box;
 }
 
 .App-logo {

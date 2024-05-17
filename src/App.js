@@ -1,20 +1,35 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import Followers from './components/Followers';
-import Following from './components/Following';
-import Sidebar from './components/Sidebar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Followers from './components/Followers/Followers';
+import Following from './components/Following/Following';
+import Sidebar from './components/Sidebar/Sidebar';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import PrivateRoute from './components/PrivateRoute';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Sidebar />
         <Routes>
-          <Route path="/seguidores" element={Followers} />
-          <Route path="/seguidos" element={Following} />
-          <Route path="/logout"/>
-          <Route path="/" element={Home} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/*"
+            element={
+              <>
+                <Sidebar />
+                <Routes>
+                  <Route path="/" element={<PrivateRoute element={Home} />} />
+                  <Route path="/seguidores" element={<PrivateRoute element={Followers} />} />
+                  <Route path="/seguidos" element={<PrivateRoute element={Following} />} />
+                  <Route path="/logout"/>
+                </Routes>
+              </>
+            }
+          />
         </Routes>
       </div>
     </Router>
