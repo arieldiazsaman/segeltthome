@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import axios from 'axios';
 import './Followers.css'
@@ -7,6 +8,7 @@ const Followers = () => {
   const userId = localStorage.getItem('userId');
   const { setFollowing } = useContext(UserContext);
   const { followers, following } = useContext(UserContext);
+  const username = localStorage.getItem('username')
 
   const isfollowingUser = (userId) => {
     return following?.find( user => user.id === userId);
@@ -27,11 +29,16 @@ const Followers = () => {
 
   return (
     <div className="followers">
-      <h2>Followers</h2>
+      <h2>Seguidores</h2>
       <div className="users">
         {followers?.filter(user => `${user.id}` !== userId).map(user => (
           <div key={user.id} className="user">
-            <h4>{user.username}</h4>
+            { user.username !== username ?
+              <Link to={`/user/${user.username}`}>
+                <h4>{user.username}</h4>
+              </Link> :
+              <h4>{user.username}</h4>
+            }
             <p>{user.name}</p>
             {!isfollowingUser(user.id) ? (
               <button

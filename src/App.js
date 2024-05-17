@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout/Logout';
+import UserPage from './components/UserPage/UserPage';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/" element={<PrivateRoute element={Home} />} />
                     <Route path="/seguidores" element={<PrivateRoute element={Followers} />} />
                     <Route path="/seguidos" element={<PrivateRoute element={Following} />} />
+                    <Route path="/user/:username" element={<PrivateRoute element={UserPage} />} />
                     <Route path="/logout" element={<PrivateRoute element={Logout}/>}/>
                   </Routes>
                 </div>

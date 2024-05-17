@@ -1,0 +1,76 @@
+.user-page {
+  padding: 20px;
+  margin: 0 auto;
+  min-width: 800px;
+  background-color: #1A1A1A;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.follow-unfollow-button {
+  padding: 10px 20px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.follow-unfollow-button:hover {
+  background-color: #0d95e8;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.tabs button:last-child {
+  margin-right: 0;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #1da1f2;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.post, .user {
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.post h4, .user h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.post p, .user p {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.user-page h2 {
+  color: red;
+}

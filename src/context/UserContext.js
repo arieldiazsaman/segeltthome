@@ -28,7 +28,7 @@ export const UserProvider = ({ children }) => {
   }, [userId]);
 
   return (
-    <UserContext.Provider value={{ following, followers }}>
+    <UserContext.Provider value={{ following, followers, setFollowing }}>
       {children}
     </UserContext.Provider>
   );

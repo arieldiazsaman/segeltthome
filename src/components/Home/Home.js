@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Home.css';
 
@@ -7,6 +8,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState('');
   const userId = localStorage.getItem('userId');
+  const username = localStorage.getItem('username')
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -44,7 +46,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h2>Home</h2>
+      <h2>Hola, { username }</h2>
       <form onSubmit={handlePostSubmit} className="post-form">
         <textarea
           value={postContent}
@@ -59,7 +61,12 @@ const Home = () => {
       <div className="posts">
         {posts.map(post => (
           <div key={post.id} className="post">
-            <h4>{post.owner_name}</h4>
+            { post.owner_name !== username ?
+              <Link to={`/user/${post.owner_name}`}>
+                <h4>{post.owner_name}</h4>
+              </Link> :
+              <h4>{post.owner_name}</h4>
+            }
             <p>{post.text}</p>
           </div>
         ))}
